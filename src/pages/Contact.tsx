@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ctaBgImg from '../assest/images/Gemini_Generated_Image_80tyo980tyo980ty.png';
 import {
   Phone,
   Mail,
@@ -69,10 +70,10 @@ const Contact = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-20 max-w-4xl mx-auto px-4 text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Get in <span className="text-[#D9A21B]">Touch</span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+            Get in <span className="text-secondary">Touch</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200">
+          <p className="text-xl md:text-2xl text-white/90">
             Start your overseas employment journey with a free consultation
           </p>
         </div>
@@ -85,11 +86,11 @@ const Contact = () => {
               href="tel:0772605023"
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 text-center group"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-[#C27733] rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
                 <Phone className="text-white" size={28} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
-              <p className="text-[#9F1D20] font-semibold text-lg">077 260 5023</p>
+              <p className="text-primary font-semibold text-lg">077 260 5023</p>
               <p className="text-gray-600 text-sm mt-2">Mon - Sat: 9:00 AM - 6:00 PM</p>
             </a>
 
@@ -111,11 +112,11 @@ const Contact = () => {
               href="mailto:dreamroadmanpower@gmail.com"
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 text-center group"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-[#C27733] rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
                 <Mail className="text-white" size={28} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
-              <p className="text-[#9F1D20] font-semibold text-sm break-all">dreamroadmanpower@gmail.com</p>
+              <p className="text-primary font-semibold text-sm break-all">dreamroadmanpower@gmail.com</p>
               <p className="text-gray-600 text-sm mt-2">We'll reply within 24 hours</p>
             </a>
           </div>
@@ -150,7 +151,7 @@ const Contact = () => {
                     value={formData.fullName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#9F1D20] focus:ring-2 focus:ring-[#9F1D20]/20 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -167,7 +168,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#9F1D20] focus:ring-2 focus:ring-[#9F1D20]/20 outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                       placeholder="0771234567"
                     />
                   </div>
@@ -183,7 +184,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#9F1D20] focus:ring-2 focus:ring-[#9F1D20]/20 outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -200,7 +201,7 @@ const Contact = () => {
                       value={formData.country}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#9F1D20] focus:ring-2 focus:ring-[#9F1D20]/20 outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                     >
                       <option value="">Select a country</option>
                       {countries.map((country) => (
@@ -221,7 +222,7 @@ const Contact = () => {
                       value={formData.jobCategory}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#9F1D20] focus:ring-2 focus:ring-[#9F1D20]/20 outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                     >
                       <option value="">Select a category</option>
                       {jobCategories.map((category) => (
@@ -243,7 +244,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#9F1D20] focus:ring-2 focus:ring-[#9F1D20]/20 outline-none transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
                     placeholder="Tell us about your experience, skills, and any questions you have..."
                   />
                 </div>
@@ -251,7 +252,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-8 py-4 bg-gradient-to-r from-[#9F1D20] to-[#C96A16] text-white rounded-lg hover:from-[#8a1a1c] hover:to-[#b45f13] transition-all hover:shadow-lg hover:-translate-y-1 font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full px-8 py-4 bg-gradient-to-r from-primary to-[#C27733] text-white rounded-lg hover:from-primary-hover hover:to-[#b05f25] transition-all hover:shadow-lg hover:-translate-y-1 font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {isSubmitting ? (
                     'Sending...'
@@ -266,36 +267,42 @@ const Contact = () => {
             </div>
 
             <div>
-              <div className="bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-2xl p-8 md:p-10 text-white mb-8">
-                <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-                <div className="space-y-6">
+              <div className="bg-cream border border-primary/20 rounded-2xl p-8 md:p-10 mb-8 shadow-md">
+                <h3 className="text-2xl font-bold mb-6 text-dark">Contact Information</h3>
+                <div className="space-y-5">
                   <div className="flex items-start gap-4">
-                    <MapPin className="flex-shrink-0 text-[#D9A21B]" size={24} />
+                    <div className="flex-shrink-0 bg-primary/10 rounded-lg p-2">
+                      <MapPin className="text-primary" size={20} />
+                    </div>
                     <div>
-                      <h4 className="font-semibold mb-1">Office Address</h4>
-                      <p className="opacity-90">No 37/108/1/1, Kandy Road, Peliyagoda</p>
+                      <h4 className="font-semibold text-dark mb-0.5">Office Address</h4>
+                      <p className="text-muted text-sm">No 37/108/1/1, Kandy Road, Peliyagoda</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <Phone className="flex-shrink-0 text-[#D9A21B]" size={24} />
+                    <div className="flex-shrink-0 bg-primary/10 rounded-lg p-2">
+                      <Phone className="text-primary" size={20} />
+                    </div>
                     <div>
-                      <h4 className="font-semibold mb-1">Phone</h4>
-                      <a href="tel:0772605023" className="opacity-90 hover:text-[#D9A21B] transition-colors">
+                      <h4 className="font-semibold text-dark mb-0.5">Phone</h4>
+                      <a href="tel:0772605023" className="text-muted text-sm hover:text-primary transition-colors">
                         077 260 5023
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <MessageCircle className="flex-shrink-0 text-[#D9A21B]" size={24} />
+                    <div className="flex-shrink-0 bg-primary/10 rounded-lg p-2">
+                      <MessageCircle className="text-primary" size={20} />
+                    </div>
                     <div>
-                      <h4 className="font-semibold mb-1">WhatsApp</h4>
+                      <h4 className="font-semibold text-dark mb-0.5">WhatsApp</h4>
                       <a
                         href="https://wa.me/94772605043"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="opacity-90 hover:text-[#D9A21B] transition-colors"
+                        className="text-muted text-sm hover:text-primary transition-colors"
                       >
                         +94 77 260 5043
                       </a>
@@ -303,12 +310,14 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <Mail className="flex-shrink-0 text-[#D9A21B]" size={24} />
+                    <div className="flex-shrink-0 bg-primary/10 rounded-lg p-2">
+                      <Mail className="text-primary" size={20} />
+                    </div>
                     <div>
-                      <h4 className="font-semibold mb-1">Email</h4>
+                      <h4 className="font-semibold text-dark mb-0.5">Email</h4>
                       <a
                         href="mailto:dreamroadmanpower@gmail.com"
-                        className="opacity-90 hover:text-[#D9A21B] transition-colors break-all"
+                        className="text-muted text-sm hover:text-primary transition-colors break-all"
                       >
                         dreamroadmanpower@gmail.com
                       </a>
@@ -316,23 +325,27 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <Clock className="flex-shrink-0 text-[#D9A21B]" size={24} />
+                    <div className="flex-shrink-0 bg-primary/10 rounded-lg p-2">
+                      <Clock className="text-primary" size={20} />
+                    </div>
                     <div>
-                      <h4 className="font-semibold mb-1">Office Hours</h4>
-                      <p className="opacity-90">Monday - Saturday: 9:00 AM - 6:00 PM</p>
-                      <p className="opacity-90">Sunday: Closed</p>
+                      <h4 className="font-semibold text-dark mb-0.5">Office Hours</h4>
+                      <p className="text-muted text-sm">Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                      <p className="text-muted text-sm">Sunday: Closed</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <Facebook className="flex-shrink-0 text-[#D9A21B]" size={24} />
+                    <div className="flex-shrink-0 bg-primary/10 rounded-lg p-2">
+                      <Facebook className="text-primary" size={20} />
+                    </div>
                     <div>
-                      <h4 className="font-semibold mb-1">Follow Us</h4>
+                      <h4 className="font-semibold text-dark mb-0.5">Follow Us</h4>
                       <a
                         href="https://facebook.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="opacity-90 hover:text-[#D9A21B] transition-colors"
+                        className="text-muted text-sm hover:text-primary transition-colors"
                       >
                         Facebook
                       </a>
@@ -346,30 +359,48 @@ const Contact = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Our office is conveniently located in Peliyagoda. We welcome walk-in consultations during office hours. For best service, please call ahead to schedule an appointment.
                 </p>
-                <div className="bg-gray-200 rounded-xl h-64 flex items-center justify-center">
-                  <MapPin size={48} className="text-gray-400" />
+                <div className="rounded-xl overflow-hidden h-64 shadow-sm">
+                  <iframe
+                    title="Dream Road Office Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.4!2d79.8872!3d6.9671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNo+37%2F108%2F1%2F1%2C+Kandy+Road%2C+Peliyagoda!5e0!3m2!1sen!2slk!4v1699999999999!5m2!1sen!2slk&q=No+37%2F108%2F1%2F1,+Kandy+Road,+Peliyagoda,+Sri+Lanka"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
                 </div>
-                <p className="text-sm text-gray-500 mt-4 text-center">
-                  License No: 3482 - Registered Manpower Agency
-                </p>
+                <div className="flex items-center justify-between mt-4">
+                  <p className="text-sm text-gray-500">License No: 3482 - Registered Manpower Agency</p>
+                  <a
+                    href="https://www.google.com/maps/search/No+37%2F108%2F1%2F1,+Kandy+Road,+Peliyagoda,+Sri+Lanka"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-primary font-semibold hover:underline"
+                  >
+                    Open in Maps →
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-r from-[#9F1D20] to-[#C96A16]">
-        <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      <section className="relative py-20 bg-fixed bg-center bg-cover" style={{ backgroundImage: `url(${ctaBgImg})` }}>
+        <div className="absolute inset-0 bg-dark/60"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Prefer to Talk Directly?
           </h2>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-xl text-white/90 mb-8">
             Call us now or send a WhatsApp message for immediate assistance
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:0772605023"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#9F1D20] rounded-lg hover:bg-gray-100 transition-all hover:shadow-2xl hover:-translate-y-1 font-semibold text-lg"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary rounded-lg hover:bg-gray-100 transition-all hover:shadow-2xl hover:-translate-y-1 font-semibold text-lg"
             >
               <Phone size={20} />
               Call Now

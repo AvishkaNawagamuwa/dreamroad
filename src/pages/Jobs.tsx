@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ctaBgImg from '../assest/images/Gemini_Generated_Image_80tyo980tyo980ty.png';
 import {
   HardHat,
   Factory,
@@ -125,10 +126,10 @@ const Jobs = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-20 max-w-4xl mx-auto px-4 text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Job <span className="text-[#D9A21B]">Opportunities</span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+            Job <span className="text-secondary">Opportunities</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200">
+          <p className="text-xl md:text-2xl text-white/90">
             Discover your next international career opportunity
           </p>
         </div>
@@ -138,7 +139,7 @@ const Jobs = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Browse by <span className="text-[#9F1D20]">Category</span>
+              Browse by <span className="text-primary">Category</span>
             </h2>
             <p className="text-lg text-gray-600">
               Explore opportunities across various industries and skill levels
@@ -157,19 +158,19 @@ const Jobs = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                  <div className="absolute top-4 right-4 bg-[#D9A21B] text-white px-4 py-2 rounded-full font-bold text-sm">
+                  <div className="absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-full font-bold text-sm">
                     {category.openings} positions
                   </div>
                 </div>
                 <div className="p-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-[#C27733] rounded-lg flex items-center justify-center mb-4">
                     <category.icon className="text-white" size={24} />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{category.title}</h3>
                   <p className="text-gray-600 mb-4">{category.description}</p>
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 text-[#9F1D20] font-semibold hover:gap-3 transition-all"
+                    className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
                   >
                     Apply Now
                     <ArrowRight size={16} />
@@ -185,7 +186,7 @@ const Jobs = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Featured <span className="text-[#9F1D20]">Positions</span>
+              Featured <span className="text-primary">Positions</span>
             </h2>
             <p className="text-lg text-gray-600">
               Current openings with verified international employers
@@ -202,19 +203,19 @@ const Jobs = () => {
                     <h3 className="text-2xl font-bold text-gray-900 mb-3">{job.title}</h3>
                     <div className="flex flex-wrap gap-4 mb-4">
                       <div className="flex items-center gap-2 text-gray-600">
-                        <Building2 size={18} className="text-[#9F1D20]" />
+                        <Building2 size={18} className="text-primary" />
                         <span>{job.company}</span>
                       </div>
                       <div className="flex items-center gap-2 text-gray-600">
-                        <MapPin size={18} className="text-[#9F1D20]" />
+                        <MapPin size={18} className="text-primary" />
                         <span>{job.location}</span>
                       </div>
                       <div className="flex items-center gap-2 text-gray-600">
-                        <DollarSign size={18} className="text-[#9F1D20]" />
+                        <DollarSign size={18} className="text-primary" />
                         <span>{job.salary}</span>
                       </div>
                       <div className="flex items-center gap-2 text-gray-600">
-                        <Clock size={18} className="text-[#9F1D20]" />
+                        <Clock size={18} className="text-primary" />
                         <span>{job.type}</span>
                       </div>
                     </div>
@@ -236,7 +237,7 @@ const Jobs = () => {
                   <div className="flex-shrink-0">
                     <Link
                       to="/contact"
-                      className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-[#9F1D20] to-[#C96A16] text-white rounded-lg hover:from-[#8a1a1c] hover:to-[#b45f13] transition-all hover:shadow-lg hover:-translate-y-1 font-semibold whitespace-nowrap"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-[#C27733] text-white rounded-lg hover:from-primary-hover hover:to-[#b05f25] transition-all hover:shadow-lg hover:-translate-y-1 font-semibold whitespace-nowrap"
                     >
                       Apply Now
                       <ArrowRight size={18} />
@@ -260,7 +261,7 @@ const Jobs = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#9F1D20] to-[#C96A16] text-white rounded-lg hover:from-[#8a1a1c] hover:to-[#b45f13] transition-all hover:shadow-xl hover:-translate-y-1 font-semibold text-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-[#C27733] text-white rounded-lg hover:from-primary-hover hover:to-[#b05f25] transition-all hover:shadow-xl hover:-translate-y-1 font-semibold text-lg"
             >
               Register Your Interest
               <ArrowRight size={20} />
@@ -269,18 +270,19 @@ const Jobs = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-r from-[#9F1D20] to-[#C96A16]">
-        <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      <section className="relative py-20 bg-fixed bg-center bg-cover" style={{ backgroundImage: `url(${ctaBgImg})` }}>
+        <div className="absolute inset-0 bg-dark/60"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Need Help Finding the Right Job?
           </h2>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-xl text-white/90 mb-8">
             Our team can help match you with opportunities that fit your skills and career goals
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-white text-[#9F1D20] rounded-lg hover:bg-gray-100 transition-all hover:shadow-2xl hover:-translate-y-1 font-semibold text-lg"
+              className="px-8 py-4 bg-white text-primary rounded-lg hover:bg-gray-100 transition-all hover:shadow-2xl hover:-translate-y-1 font-semibold text-lg"
             >
               Schedule Consultation
             </Link>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ctaBgImg from '../assest/images/Gemini_Generated_Image_80tyo980tyo980ty.png';
 import {
   FileText,
   Briefcase,
@@ -53,7 +54,7 @@ const Services = () => {
         'Police clearance assistance',
         'Medical certificate support',
       ],
-      image: 'https://images.unsplash.com/photo-1554224311-beee4f0a3c69?w=800&h=600&fit=crop',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop',
     },
     {
       icon: Users,
@@ -109,10 +110,10 @@ const Services = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-20 max-w-4xl mx-auto px-4 text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Our <span className="text-[#D9A21B]">Services</span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+            Our <span className="text-secondary">Services</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200">
+          <p className="text-xl md:text-2xl text-white/90">
             Comprehensive support for your overseas employment journey
           </p>
         </div>
@@ -122,7 +123,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Professional Services for <span className="text-[#9F1D20]">Every Step</span>
+              Professional Services for <span className="text-primary">Every Step</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               From initial consultation to successful placement, we provide end-to-end support to ensure your overseas employment journey is smooth, legal, and successful.
@@ -145,7 +146,7 @@ const Services = () => {
                   />
                 </div>
                 <div className={index % 2 === 1 ? 'md:col-start-1 md:row-start-1' : ''}>
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-xl flex items-center justify-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-[#C27733] rounded-xl flex items-center justify-center mb-6">
                     <service.icon className="text-white" size={32} />
                   </div>
                   <h3 className="text-3xl font-bold text-gray-900 mb-4">{service.title}</h3>
@@ -155,14 +156,14 @@ const Services = () => {
                   <div className="space-y-3 mb-6">
                     {service.benefits.map((benefit, idx) => (
                       <div key={idx} className="flex items-start gap-3">
-                        <CheckCircle className="flex-shrink-0 text-[#9F1D20] mt-1" size={20} />
+                        <CheckCircle className="flex-shrink-0 text-primary mt-1" size={20} />
                         <span className="text-gray-700">{benefit}</span>
                       </div>
                     ))}
                   </div>
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#9F1D20] to-[#C96A16] text-white rounded-lg hover:from-[#8a1a1c] hover:to-[#b45f13] transition-all hover:shadow-lg hover:-translate-y-1 font-semibold"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-[#C27733] text-white rounded-lg hover:from-primary-hover hover:to-[#b05f25] transition-all hover:shadow-lg hover:-translate-y-1 font-semibold"
                   >
                     Get Started
                     <ArrowRight size={18} />
@@ -176,25 +177,25 @@ const Services = () => {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-3xl p-12 md:p-16 text-white text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <div className="bg-[#FAF7F2] rounded-3xl p-12 md:p-16 text-center border border-primary/10">
+            <h2 className="text-3xl md:text-4xl font-bold text-dark mb-6">
               Why Choose Our Services?
             </h2>
-            <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-muted mb-8 max-w-3xl mx-auto leading-relaxed">
               We provide comprehensive, transparent, and professional support at every stage of your overseas employment journey. Our licensed agency ensures legal compliance and ethical practices.
             </p>
             <div className="grid md:grid-cols-3 gap-8 mt-12">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-                <div className="text-5xl font-bold mb-2">100%</div>
-                <div className="text-lg">Legal & Licensed</div>
+              <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                <div className="text-5xl font-bold mb-2 text-primary">100%</div>
+                <div className="text-lg text-dark">Legal & Licensed</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-                <div className="text-5xl font-bold mb-2">24/7</div>
-                <div className="text-lg">Support Available</div>
+              <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                <div className="text-5xl font-bold mb-2 text-primary">24/7</div>
+                <div className="text-lg text-dark">Support Available</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-                <div className="text-5xl font-bold mb-2">500+</div>
-                <div className="text-lg">Successful Placements</div>
+              <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                <div className="text-5xl font-bold mb-2 text-primary">500+</div>
+                <div className="text-lg text-dark">Successful Placements</div>
               </div>
             </div>
           </div>
@@ -221,7 +222,7 @@ const Services = () => {
                   'Post-placement follow-up and support',
                 ].map((step, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-full flex items-center justify-center text-white font-bold text-sm">
+                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-primary to-[#C27733] rounded-full flex items-center justify-center text-white font-bold text-sm">
                       {index + 1}
                     </div>
                     <p className="text-gray-700 pt-1">{step}</p>
@@ -230,7 +231,7 @@ const Services = () => {
               </div>
               <Link
                 to="/process"
-                className="inline-flex items-center gap-2 mt-8 text-[#9F1D20] font-semibold hover:gap-3 transition-all text-lg"
+                className="inline-flex items-center gap-2 mt-8 text-primary font-semibold hover:gap-3 transition-all text-lg"
               >
                 View Detailed Process
                 <ArrowRight size={20} />
@@ -247,18 +248,19 @@ const Services = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-r from-[#9F1D20] to-[#C96A16]">
-        <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      <section className="relative py-20 bg-fixed bg-center bg-cover" style={{ backgroundImage: `url(${ctaBgImg})` }}>
+        <div className="absolute inset-0 bg-dark/60"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-xl text-white/90 mb-8">
             Contact us today for a free consultation and let us help you achieve your international career goals
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-white text-[#9F1D20] rounded-lg hover:bg-gray-100 transition-all hover:shadow-2xl hover:-translate-y-1 font-semibold text-lg"
+              className="px-8 py-4 bg-white text-primary rounded-lg hover:bg-gray-100 transition-all hover:shadow-2xl hover:-translate-y-1 font-semibold text-lg"
             >
               Schedule Consultation
             </Link>

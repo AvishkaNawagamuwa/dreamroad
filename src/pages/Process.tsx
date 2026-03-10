@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ctaBgImg from '../assest/images/Gemini_Generated_Image_80tyo980tyo980ty.png';
 import {
   MessageCircle,
   Search,
@@ -117,10 +118,10 @@ const Process = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-20 max-w-4xl mx-auto px-4 text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Application <span className="text-[#D9A21B]">Process</span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+            Application <span className="text-secondary">Process</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200">
+          <p className="text-xl md:text-2xl text-white/90">
             Your journey to overseas employment in six structured steps
           </p>
         </div>
@@ -130,7 +131,7 @@ const Process = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              How We <span className="text-[#9F1D20]">Support You</span>
+              How We <span className="text-primary">Support You</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               We follow a systematic, transparent process to ensure your overseas employment journey is smooth, legal, and successful. Each step is designed to maximize your chances of success while minimizing stress and uncertainty.
@@ -153,18 +154,18 @@ const Process = () => {
                         alt={step.title}
                         className="rounded-2xl shadow-2xl w-full h-[400px] object-cover"
                       />
-                      <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-2xl flex items-center justify-center shadow-xl">
+                      <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-primary to-[#C27733] rounded-2xl flex items-center justify-center shadow-xl">
                         <step.icon className="text-white" size={48} />
                       </div>
                     </div>
                   </div>
                   <div className={index % 2 === 1 ? 'md:col-start-1 md:row-start-1' : ''}>
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="text-7xl font-bold text-[#9F1D20]/10">
+                      <div className="text-7xl font-bold text-primary/10">
                         {step.number}
                       </div>
                       <div>
-                        <div className="text-sm font-semibold text-[#9F1D20] mb-1">STEP {step.number}</div>
+                        <div className="text-sm font-semibold text-primary mb-1">STEP {step.number}</div>
                         <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
                           {step.title}
                         </h3>
@@ -178,7 +179,7 @@ const Process = () => {
                       <ul className="space-y-3">
                         {step.details.map((detail, idx) => (
                           <li key={idx} className="flex items-start gap-3">
-                            <CheckCircle className="flex-shrink-0 text-[#9F1D20] mt-0.5" size={20} />
+                            <CheckCircle className="flex-shrink-0 text-primary mt-0.5" size={20} />
                             <span className="text-gray-700">{detail}</span>
                           </li>
                         ))}
@@ -188,7 +189,7 @@ const Process = () => {
                 </div>
                 {index < steps.length - 1 && (
                   <div className="flex justify-center my-12">
-                    <div className="w-0.5 h-16 bg-gradient-to-b from-[#9F1D20] to-[#C96A16]"></div>
+                    <div className="w-0.5 h-16 bg-gradient-to-b from-primary to-[#C27733]"></div>
                   </div>
                 )}
               </div>
@@ -201,7 +202,7 @@ const Process = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Typical <span className="text-[#9F1D20]">Timeline</span>
+              Typical <span className="text-primary">Timeline</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               While timelines can vary based on destination and individual circumstances, here's what you can typically expect
@@ -209,7 +210,7 @@ const Process = () => {
           </div>
           <div className="max-w-5xl mx-auto">
             <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#9F1D20] via-[#C96A16] to-[#D9A21B] hidden md:block"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary via-[#C27733] to-secondary hidden md:block"></div>
               <div className="space-y-12">
                 {timeline.map((item, index) => (
                   <div
@@ -220,12 +221,12 @@ const Process = () => {
                   >
                     <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
                       <div className="bg-gradient-to-br from-[#F8F7F3] to-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-200">
-                        <div className="font-bold text-[#9F1D20] mb-2">{item.phase}</div>
+                        <div className="font-bold text-primary mb-2">{item.phase}</div>
                         <div className="text-xl font-semibold text-gray-900">{item.activity}</div>
                       </div>
                     </div>
                     <div className="relative z-10 flex-shrink-0">
-                      <div className="w-16 h-16 bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-full flex items-center justify-center shadow-xl">
+                      <div className="w-16 h-16 bg-gradient-to-br from-primary to-[#C27733] rounded-full flex items-center justify-center shadow-xl">
                         <div className="text-white font-bold text-xl">{index + 1}</div>
                       </div>
                     </div>
@@ -245,13 +246,13 @@ const Process = () => {
 
       <section className="py-20 bg-gradient-to-b from-[#F8F7F3] to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-3xl p-12 md:p-16 text-white">
+          <div className="bg-[#FAF7F2] rounded-3xl p-12 md:p-16 border border-primary/10">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-dark mb-6">
                   Transparent Process, Clear Communication
                 </h2>
-                <p className="text-xl mb-8 opacity-90 leading-relaxed">
+                <p className="text-lg text-muted mb-8 leading-relaxed">
                   Throughout every step, we maintain clear communication and transparency. You'll always know where you are in the process and what to expect next.
                 </p>
                 <div className="space-y-4">
@@ -263,8 +264,8 @@ const Process = () => {
                     'No hidden fees or surprises',
                   ].map((item, index) => (
                     <div key={index} className="flex items-center gap-3">
-                      <CheckCircle className="flex-shrink-0 text-[#D9A21B]" size={24} />
-                      <span className="text-lg">{item}</span>
+                      <CheckCircle className="flex-shrink-0 text-primary" size={24} />
+                      <span className="text-lg text-dark">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -281,18 +282,19 @@ const Process = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-r from-[#9F1D20] to-[#C96A16]">
-        <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      <section className="relative py-20 bg-fixed bg-center bg-cover" style={{ backgroundImage: `url(${ctaBgImg})` }}>
+        <div className="absolute inset-0 bg-dark/60"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Begin Your Journey?
           </h2>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-xl text-white/90 mb-8">
             Start your overseas employment journey today with our professional guidance and support
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#9F1D20] rounded-lg hover:bg-gray-100 transition-all hover:shadow-2xl hover:-translate-y-1 font-semibold text-lg"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary rounded-lg hover:bg-gray-100 transition-all hover:shadow-2xl hover:-translate-y-1 font-semibold text-lg"
             >
               Start Application
               <ArrowRight size={20} />

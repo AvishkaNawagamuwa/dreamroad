@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ctaBgImg from '../assest/images/Gemini_Generated_Image_80tyo980tyo980ty.png';
 import {
   HardHat,
   Factory,
@@ -34,7 +35,7 @@ const Countries = () => {
     },
     {
       name: 'Romania',
-      image: 'https://images.unsplash.com/photo-1605608278551-cf3e3169aa94?w=1200&h=800&fit=crop',
+      image: 'https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?auto=format&fit=crop&w=1200&q=80',
       description:
         'Romania is an emerging destination for international workers, offering diverse opportunities in manufacturing, construction, and service sectors with attractive compensation packages.',
       sectors: [
@@ -53,7 +54,7 @@ const Countries = () => {
     },
     {
       name: 'Hungary',
-      image: 'https://images.unsplash.com/photo-1541697748-1aa5d0857c5f?w=1200&h=800&fit=crop',
+      image: 'https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=1200&q=80',
       description:
         'Hungary provides stable employment opportunities with excellent infrastructure and a strategic location in Central Europe. The country welcomes international workers in various sectors.',
       sectors: [
@@ -110,7 +111,7 @@ const Countries = () => {
     },
     {
       name: 'Saudi Arabia',
-      image: 'https://images.unsplash.com/photo-1591608971362-f08b2a75731a?w=1200&h=800&fit=crop',
+      image: 'https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1200&q=80',
       description:
         'Saudi Arabia is one of the largest employers of international workers in the Middle East, offering competitive packages and opportunities across diverse industries.',
       sectors: [
@@ -148,10 +149,10 @@ const Countries = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-20 max-w-4xl mx-auto px-4 text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Work <span className="text-[#D9A21B]">Destinations</span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+            Work <span className="text-secondary">Destinations</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200">
+          <p className="text-xl md:text-2xl text-white/90">
             Explore international opportunities across multiple countries
           </p>
         </div>
@@ -161,7 +162,7 @@ const Countries = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Popular <span className="text-[#9F1D20]">Destinations</span>
+              Popular <span className="text-primary">Destinations</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               We connect you with verified employment opportunities in top international destinations, each offering unique benefits and career prospects.
@@ -184,7 +185,7 @@ const Countries = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     <div className="absolute bottom-6 left-6">
                       <div className="flex items-center gap-2 text-white mb-2">
-                        <MapPin size={24} className="text-[#D9A21B]" />
+                        <MapPin size={24} className="text-primary" />
                         <h3 className="text-4xl font-bold">{country.name}</h3>
                       </div>
                     </div>
@@ -199,7 +200,7 @@ const Countries = () => {
                     <div className="space-y-2 mb-6">
                       {country.sectors.map((sector, idx) => (
                         <div key={idx} className="flex items-center gap-3">
-                          <CheckCircle className="text-[#9F1D20] flex-shrink-0" size={20} />
+                          <CheckCircle className="text-primary flex-shrink-0" size={20} />
                           <span className="text-gray-700">{sector}</span>
                         </div>
                       ))}
@@ -219,7 +220,7 @@ const Countries = () => {
 
                     <Link
                       to="/contact"
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#9F1D20] to-[#C96A16] text-white rounded-lg hover:from-[#8a1a1c] hover:to-[#b45f13] transition-all hover:shadow-lg hover:-translate-y-1 font-semibold"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-[#C27733] text-white rounded-lg hover:from-primary-hover hover:to-[#b05f25] transition-all hover:shadow-lg hover:-translate-y-1 font-semibold"
                     >
                       Apply for {country.name}
                       <ArrowRight size={18} />
@@ -236,7 +237,7 @@ const Countries = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Job <span className="text-[#9F1D20]">Categories</span>
+              Job <span className="text-primary">Categories</span>
             </h2>
             <p className="text-lg text-gray-600">
               We recruit for various positions across all destinations
@@ -255,14 +256,14 @@ const Countries = () => {
                 key={index}
                 className="bg-gradient-to-br from-[#F8F7F3] to-white rounded-2xl p-8 hover:shadow-2xl transition-all hover:-translate-y-2 border border-gray-100"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-[#C27733] rounded-xl flex items-center justify-center mb-6">
                   <category.icon className="text-white" size={28} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{category.title}</h3>
                 <p className="text-gray-600 mb-4">{category.description}</p>
                 <Link
                   to="/jobs"
-                  className="inline-flex items-center gap-2 text-[#9F1D20] font-semibold hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
                 >
                   View Jobs
                   <ArrowRight size={16} />
@@ -273,18 +274,19 @@ const Countries = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-r from-[#9F1D20] to-[#C96A16]">
-        <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      <section className="relative py-20 bg-fixed bg-center bg-cover" style={{ backgroundImage: `url(${ctaBgImg})` }}>
+        <div className="absolute inset-0 bg-dark/60"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Find Your Ideal Destination
           </h2>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-xl text-white/90 mb-8">
             Not sure which country is right for you? Contact us for personalized guidance based on your skills and preferences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-white text-[#9F1D20] rounded-lg hover:bg-gray-100 transition-all hover:shadow-2xl hover:-translate-y-1 font-semibold text-lg"
+              className="px-8 py-4 bg-white text-primary rounded-lg hover:bg-gray-100 transition-all hover:shadow-2xl hover:-translate-y-1 font-semibold text-lg"
             >
               Schedule Consultation
             </Link>

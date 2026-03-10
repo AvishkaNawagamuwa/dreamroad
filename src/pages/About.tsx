@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ctaBgImg from '../assest/images/Gemini_Generated_Image_80tyo980tyo980ty.png';
 import {
   Target,
   Eye,
@@ -67,10 +68,10 @@ const About = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-20 max-w-4xl mx-auto px-4 text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            About <span className="text-[#D9A21B]">Dream Road</span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+            About <span className="text-secondary">Dream Road</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200">
+          <p className="text-xl md:text-2xl text-white/90">
             Your trusted partner in overseas employment and work visa guidance
           </p>
         </div>
@@ -96,7 +97,7 @@ const About = () => {
               </div>
               <div className="mt-8 p-6 bg-gradient-to-br from-[#F8F7F3] to-white rounded-xl border border-gray-200">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-xl flex items-center justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-[#C27733] rounded-xl flex items-center justify-center">
                     <Award className="text-white" size={32} />
                   </div>
                   <div>
@@ -110,7 +111,7 @@ const About = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="absolute -top-6 -right-6 w-72 h-72 bg-[#D9A21B]/20 rounded-full blur-3xl"></div>
+              <div className="absolute -top-6 -right-6 w-72 h-72 bg-primary/20 rounded-full blur-3xl"></div>
               <img
                 src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=900&fit=crop"
                 alt="Our Team"
@@ -125,7 +126,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div className="bg-white rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-shadow">
-              <div className="w-20 h-20 bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-primary to-[#C27733] rounded-2xl flex items-center justify-center mb-6">
                 <Target className="text-white" size={40} />
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
@@ -135,7 +136,7 @@ const About = () => {
             </div>
 
             <div className="bg-white rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-shadow">
-              <div className="w-20 h-20 bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-primary to-[#C27733] rounded-2xl flex items-center justify-center mb-6">
                 <Eye className="text-white" size={40} />
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h2>
@@ -149,10 +150,10 @@ const About = () => {
             {achievements.map((item, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-2xl p-6 text-center text-white hover:scale-105 transition-transform"
+                className="bg-white rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition-transform border border-gray-100"
               >
-                <div className="text-4xl md:text-5xl font-bold mb-2">{item.number}</div>
-                <div className="text-sm md:text-base opacity-90">{item.label}</div>
+                <div className="text-4xl md:text-5xl font-bold mb-2 text-primary">{item.number}</div>
+                <div className="text-sm md:text-base text-muted">{item.label}</div>
               </div>
             ))}
           </div>
@@ -163,7 +164,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Core <span className="text-[#9F1D20]">Values</span>
+              Our Core <span className="text-primary">Values</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               The principles that guide everything we do
@@ -175,7 +176,7 @@ const About = () => {
                 key={index}
                 className="bg-gradient-to-br from-[#F8F7F3] to-white rounded-2xl p-8 hover:shadow-2xl transition-all hover:-translate-y-2 border border-gray-100"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-[#C27733] rounded-xl flex items-center justify-center mb-6">
                   <value.icon className="text-white" size={28} />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{value.title}</h3>
@@ -186,7 +187,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-[#9F1D20] to-[#C96A16] text-white">
+      <section className="py-20 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -197,17 +198,17 @@ const About = () => {
               />
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-dark mb-6">
                 Our Service Approach
               </h2>
-              <p className="text-xl mb-8 opacity-90 leading-relaxed">
+              <p className="text-lg text-muted mb-8 leading-relaxed">
                 We believe in a personalized, step-by-step approach that puts your needs and aspirations first.
               </p>
               <div className="space-y-4">
                 {approach.map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="flex-shrink-0 text-[#D9A21B] mt-1" size={24} />
-                    <p className="text-lg">{item}</p>
+                    <CheckCircle className="flex-shrink-0 text-primary mt-1" size={24} />
+                    <p className="text-lg text-dark">{item}</p>
                   </div>
                 ))}
               </div>
@@ -220,12 +221,12 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Clients <span className="text-[#9F1D20]">Trust Us</span>
+              Why Clients <span className="text-primary">Trust Us</span>
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-xl flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-[#C27733] rounded-xl flex items-center justify-center mb-6">
                 <Shield className="text-white" size={28} />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Licensed & Legal</h3>
@@ -235,7 +236,7 @@ const About = () => {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-xl flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-[#C27733] rounded-xl flex items-center justify-center mb-6">
                 <Users className="text-white" size={28} />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Experienced Team</h3>
@@ -245,7 +246,7 @@ const About = () => {
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#9F1D20] to-[#C96A16] rounded-xl flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-[#C27733] rounded-xl flex items-center justify-center mb-6">
                 <TrendingUp className="text-white" size={28} />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Proven Success</h3>
@@ -257,18 +258,19 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-r from-[#9F1D20] to-[#C96A16]">
-        <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      <section className="relative py-20 bg-fixed bg-center bg-cover" style={{ backgroundImage: `url(${ctaBgImg})` }}>
+        <div className="absolute inset-0 bg-dark/60"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Begin Your Journey?
           </h2>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-xl text-white/90 mb-8">
             Let us help you achieve your international career goals with professional guidance and support
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#9F1D20] rounded-lg hover:bg-gray-100 transition-all hover:shadow-2xl hover:-translate-y-1 font-semibold text-lg"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary rounded-lg hover:bg-gray-100 transition-all hover:shadow-2xl hover:-translate-y-1 font-semibold text-lg"
             >
               Contact Us Today
               <ArrowRight size={20} />
