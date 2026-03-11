@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import ctaBgImg from '../assest/images/Gemini_Generated_Image_80tyo980tyo980ty.png';
 import {
   HardHat,
@@ -11,6 +12,8 @@ import {
   CheckCircle,
   MapPin,
 } from 'lucide-react';
+import PageTransition from '../components/PageTransition';
+import { fadeUp, slideLeft, slideRight, staggerContainer, staggerItem, hoverLift, viewportConfig } from '../utils/animations';
 
 const Countries = () => {
   const countries = [
@@ -140,40 +143,56 @@ const Countries = () => {
   };
 
   return (
+    <PageTransition>
     <div className="min-h-screen">
       <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10"></div>
-        <img
+        <motion.img
+          initial={{ scale: 1.1, opacity: 0.8 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.2, ease: 'easeOut' }}
           src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1920&h=800&fit=crop"
           alt="Work Destinations"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-20 max-w-4xl mx-auto px-4 text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-4xl md:text-6xl font-bold mb-4 text-white">
             Work <span className="text-secondary">Destinations</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl md:text-2xl text-white/90">
             Explore international opportunities across multiple countries
-          </p>
+          </motion.p>
         </div>
       </section>
 
       <section className="py-20 bg-gradient-to-b from-[#F8F7F3] to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewportConfig} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Popular <span className="text-primary">Destinations</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               We connect you with verified employment opportunities in top international destinations, each offering unique benefits and career prospects.
             </p>
-          </div>
+          </motion.div>
 
           <div className="space-y-20">
             {countries.map((country, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-shadow"
+                variants={index % 2 === 0 ? slideRight : slideLeft}
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewportConfig}
+                className="bg-white rounded-3xl shadow-2xl overflow-hidden"
               >
                 <div className="grid md:grid-cols-2 gap-0">
                   <div className={`relative h-[400px] ${index % 2 === 1 ? 'md:order-2' : ''}`}>
@@ -227,7 +246,7 @@ const Countries = () => {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -235,15 +254,15 @@ const Countries = () => {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewportConfig} className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Job <span className="text-primary">Categories</span>
             </h2>
             <p className="text-lg text-gray-600">
               We recruit for various positions across all destinations
             </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          </motion.div>
+          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportConfig} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: HardHat, title: 'Construction Workers', description: 'Skilled and general construction labor' },
               { icon: Factory, title: 'Factory Workers', description: 'Manufacturing and production staff' },
@@ -252,9 +271,11 @@ const Countries = () => {
               { icon: Wrench, title: 'Skilled Technicians', description: 'Technical and maintenance roles' },
               { icon: Users, title: 'General Labor', description: 'Various entry-level positions' },
             ].map((category, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-gradient-to-br from-[#F8F7F3] to-white rounded-2xl p-8 hover:shadow-2xl transition-all hover:-translate-y-2 border border-gray-100"
+                variants={staggerItem}
+                whileHover={hoverLift}
+                className="bg-gradient-to-br from-[#F8F7F3] to-white rounded-2xl p-8 border border-gray-100 cursor-default"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-primary to-[#C27733] rounded-xl flex items-center justify-center mb-6">
                   <category.icon className="text-white" size={28} />
@@ -268,21 +289,21 @@ const Countries = () => {
                   View Jobs
                   <ArrowRight size={16} />
                 </Link>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       <section className="relative py-20 bg-fixed bg-center bg-cover" style={{ backgroundImage: `url(${ctaBgImg})` }}>
         <div className="absolute inset-0 bg-dark/60"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewportConfig} className="text-3xl md:text-4xl font-bold text-white mb-6">
             Find Your Ideal Destination
-          </h2>
-          <p className="text-xl text-white/90 mb-8">
+          </motion.h2>
+          <motion.p variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewportConfig} className="text-xl text-white/90 mb-8">
             Not sure which country is right for you? Contact us for personalized guidance based on your skills and preferences.
-          </p>
+          </motion.p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -300,6 +321,7 @@ const Countries = () => {
         </div>
       </section>
     </div>
+    </PageTransition>
   );
 };
 

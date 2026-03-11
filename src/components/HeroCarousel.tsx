@@ -139,9 +139,9 @@ const HeroCarousel = () => {
                   href="https://wa.me/94772605043"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-8 py-4 lg:px-10 lg:py-4 bg-white/10 backdrop-blur-md text-white border border-white/20 hover:bg-white/20 transition-all shadow-soft font-bold text-[16px] lg:text-[18px] inline-flex items-center justify-center gap-2 rounded-xl z-50"
+                  className="px-8 py-4 lg:px-10 lg:py-4 bg-brand-green text-white hover:bg-brand-green/90 transition-all font-bold text-[16px] lg:text-[18px] inline-flex items-center justify-center gap-2 rounded-xl z-50"
                 >
-                  <MessageCircle size={20} className="text-brand-green" />
+                  <MessageCircle size={20} className="text-white" />
                   WhatsApp Us
                 </a>
               </div>

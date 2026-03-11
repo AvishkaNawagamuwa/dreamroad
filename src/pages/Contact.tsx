@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import ctaBgImg from '../assest/images/Gemini_Generated_Image_80tyo980tyo980ty.png';
 import {
   Phone,
@@ -10,6 +11,8 @@ import {
   CheckCircle,
   Facebook,
 } from 'lucide-react';
+import PageTransition from '../components/PageTransition';
+import { fadeUp, staggerContainer, staggerItem, hoverLift, slideLeft, slideRight, viewportConfig } from '../utils/animations';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -61,30 +64,44 @@ const Contact = () => {
   };
 
   return (
+    <PageTransition>
     <div className="min-h-screen">
       <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10"></div>
-        <img
+        <motion.img
+          initial={{ scale: 1.1, opacity: 0.8 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.2, ease: 'easeOut' }}
           src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&h=800&fit=crop"
           alt="Contact Us"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-20 max-w-4xl mx-auto px-4 text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-4xl md:text-6xl font-bold mb-4 text-white">
             Get in <span className="text-secondary">Touch</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl md:text-2xl text-white/90">
             Start your overseas employment journey with a free consultation
-          </p>
+          </motion.p>
         </div>
       </section>
 
       <section className="py-20 bg-gradient-to-b from-[#F8F7F3] to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-3 gap-8 mb-12">
-            <a
+          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportConfig} className="grid lg:grid-cols-3 gap-8 mb-12">
+            <motion.a
+              variants={staggerItem}
+              whileHover={hoverLift}
               href="tel:0772605023"
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 text-center group"
+              className="bg-white rounded-2xl p-8 shadow-lg text-center group"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-primary to-[#C27733] rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
                 <Phone className="text-white" size={28} />
@@ -92,13 +109,15 @@ const Contact = () => {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
               <p className="text-primary font-semibold text-lg">077 260 5023</p>
               <p className="text-gray-600 text-sm mt-2">Mon - Sat: 9:00 AM - 6:00 PM</p>
-            </a>
+            </motion.a>
 
-            <a
+            <motion.a
+              variants={staggerItem}
+              whileHover={hoverLift}
               href="https://wa.me/94772605043"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 text-center group"
+              className="bg-white rounded-2xl p-8 shadow-lg text-center group"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-green-500 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
                 <MessageCircle className="text-white" size={28} />
@@ -106,11 +125,13 @@ const Contact = () => {
               <h3 className="text-xl font-bold text-gray-900 mb-2">WhatsApp</h3>
               <p className="text-green-600 font-semibold text-lg">+94 77 260 5043</p>
               <p className="text-gray-600 text-sm mt-2">Quick responses available</p>
-            </a>
+            </motion.a>
 
-            <a
+            <motion.a
+              variants={staggerItem}
+              whileHover={hoverLift}
               href="mailto:dreamroadmanpower@gmail.com"
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 text-center group"
+              className="bg-white rounded-2xl p-8 shadow-lg text-center group"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-primary to-[#C27733] rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
                 <Mail className="text-white" size={28} />
@@ -118,11 +139,11 @@ const Contact = () => {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
               <p className="text-primary font-semibold text-sm break-all">dreamroadmanpower@gmail.com</p>
               <p className="text-gray-600 text-sm mt-2">We'll reply within 24 hours</p>
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            <div>
+            <motion.div variants={slideRight} initial="hidden" whileInView="visible" viewport={viewportConfig}>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Send Us a Message
               </h2>
@@ -264,9 +285,9 @@ const Contact = () => {
                   )}
                 </button>
               </form>
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div variants={slideLeft} initial="hidden" whileInView="visible" viewport={viewportConfig}>
               <div className="bg-cream border border-primary/20 rounded-2xl p-8 md:p-10 mb-8 shadow-md">
                 <h3 className="text-2xl font-bold mb-6 text-dark">Contact Information</h3>
                 <div className="space-y-5">
@@ -383,7 +404,7 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -391,12 +412,12 @@ const Contact = () => {
       <section className="relative py-20 bg-fixed bg-center bg-cover" style={{ backgroundImage: `url(${ctaBgImg})` }}>
         <div className="absolute inset-0 bg-dark/60"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewportConfig} className="text-3xl md:text-4xl font-bold text-white mb-6">
             Prefer to Talk Directly?
-          </h2>
-          <p className="text-xl text-white/90 mb-8">
+          </motion.h2>
+          <motion.p variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewportConfig} className="text-xl text-white/90 mb-8">
             Call us now or send a WhatsApp message for immediate assistance
-          </p>
+          </motion.p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:0772605023"
@@ -418,6 +439,7 @@ const Contact = () => {
         </div>
       </section>
     </div>
+    </PageTransition>
   );
 };
 

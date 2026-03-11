@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import ctaBgImg from '../assest/images/Gemini_Generated_Image_80tyo980tyo980ty.png';
 import {
   MessageCircle,
@@ -10,6 +11,8 @@ import {
   ArrowRight,
   Phone,
 } from 'lucide-react';
+import PageTransition from '../components/PageTransition';
+import { fadeUp, slideLeft, slideRight, staggerContainer, staggerItem, viewportConfig } from '../utils/animations';
 
 const Process = () => {
   const steps = [
@@ -109,39 +112,55 @@ const Process = () => {
   ];
 
   return (
+    <PageTransition>
     <div className="min-h-screen">
       <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10"></div>
-        <img
+        <motion.img
+          initial={{ scale: 1.1, opacity: 0.8 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.2, ease: 'easeOut' }}
           src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1920&h=800&fit=crop"
           alt="Our Process"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-20 max-w-4xl mx-auto px-4 text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-4xl md:text-6xl font-bold mb-4 text-white">
             Application <span className="text-secondary">Process</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl md:text-2xl text-white/90">
             Your journey to overseas employment in six structured steps
-          </p>
+          </motion.p>
         </div>
       </section>
 
       <section className="py-20 bg-gradient-to-b from-[#F8F7F3] to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewportConfig} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               How We <span className="text-primary">Support You</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               We follow a systematic, transparent process to ensure your overseas employment journey is smooth, legal, and successful. Each step is designed to maximize your chances of success while minimizing stress and uncertainty.
             </p>
-          </div>
+          </motion.div>
 
           <div className="space-y-24">
             {steps.map((step, index) => (
-              <div
+              <motion.div
                 key={index}
+                variants={index % 2 === 0 ? slideRight : slideLeft}
+                initial="hidden"
+                whileInView="visible"
+                viewport={viewportConfig}
                 className="relative"
               >
                 <div className={`grid md:grid-cols-2 gap-12 items-center ${
@@ -192,7 +211,7 @@ const Process = () => {
                     <div className="w-0.5 h-16 bg-gradient-to-b from-primary to-[#C27733]"></div>
                   </div>
                 )}
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -200,21 +219,25 @@ const Process = () => {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewportConfig} className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Typical <span className="text-primary">Timeline</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               While timelines can vary based on destination and individual circumstances, here's what you can typically expect
             </p>
-          </div>
+          </motion.div>
           <div className="max-w-5xl mx-auto">
             <div className="relative">
               <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary via-[#C27733] to-secondary hidden md:block"></div>
               <div className="space-y-12">
                 {timeline.map((item, index) => (
-                  <div
+                  <motion.div
                     key={index}
+                    initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.07 }}
+                    viewport={viewportConfig}
                     className={`flex items-center gap-8 ${
                       index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                     }`}
@@ -231,7 +254,7 @@ const Process = () => {
                       </div>
                     </div>
                     <div className="flex-1 hidden md:block"></div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -246,7 +269,7 @@ const Process = () => {
 
       <section className="py-20 bg-gradient-to-b from-[#F8F7F3] to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-[#FAF7F2] rounded-3xl p-12 md:p-16 border border-primary/10">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewportConfig} className="bg-[#FAF7F2] rounded-3xl p-12 md:p-16 border border-primary/10">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-dark mb-6">
@@ -263,34 +286,43 @@ const Process = () => {
                     'Available to answer your questions',
                     'No hidden fees or surprises',
                   ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <CheckCircle className="flex-shrink-0 text-primary" size={24} />
-                      <span className="text-lg text-dark">{item}</span>
-                    </div>
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.08 }}
+                    viewport={viewportConfig}
+                    className="flex items-center gap-3"
+                  >
+                    <CheckCircle className="flex-shrink-0 text-primary" size={24} />
+                    <span className="text-lg text-dark">{item}</span>
+                  </motion.div>
                   ))}
                 </div>
               </div>
               <div>
-                <img
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop"
-                  alt="Our Team"
-                  className="rounded-2xl shadow-2xl w-full h-[400px] object-cover"
-                />
+                <motion.img
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.5 }}
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop"
+                alt="Our Team"
+                className="rounded-2xl shadow-2xl w-full h-[400px] object-cover"
+              />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       <section className="relative py-20 bg-fixed bg-center bg-cover" style={{ backgroundImage: `url(${ctaBgImg})` }}>
         <div className="absolute inset-0 bg-dark/60"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewportConfig} className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Begin Your Journey?
-          </h2>
-          <p className="text-xl text-white/90 mb-8">
+          </motion.h2>
+          <motion.p variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewportConfig} className="text-xl text-white/90 mb-8">
             Start your overseas employment journey today with our professional guidance and support
-          </p>
+          </motion.p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -310,6 +342,7 @@ const Process = () => {
         </div>
       </section>
     </div>
+    </PageTransition>
   );
 };
 

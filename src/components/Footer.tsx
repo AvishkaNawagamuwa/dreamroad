@@ -126,7 +126,7 @@ const Footer = () => {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted text-sm text-center md:text-left">
-            © {new Date().getFullYear()} Dream Road Manpower Agency.<br className="md:hidden" /> All rights reserved. <span className="text-gray-400 font-medium">License No: 3482</span>
+            © 2026 The Loop. All rights reserved. <span className="text-gray-400 font-medium">License No: 3482</span>
           </p>
           <div className="flex gap-6 text-sm text-muted">
             <Link to="/contact" className="hover:text-white transition-colors">Privacy Policy</Link>
