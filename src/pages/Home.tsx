@@ -49,8 +49,8 @@ const Home = () => {
                   key={index} 
                   className="bg-white/90 backdrop-blur-xl rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-white hover:border-primary/20 hover:shadow-[0_20px_40px_rgba(184,106,46,0.12)] group transition-all duration-500"
                 >
-                  <div className="w-16 h-16 bg-cream rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/5 transition-colors">
-                    <badge.icon className="text-primary group-hover:scale-110 transition-transform duration-300" size={32} />
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-[#C27733] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <badge.icon className="text-white" size={32} />
                   </div>
                   <h3 className="text-xl font-bold text-dark mb-3 leading-tight">{badge.title}</h3>
                   <p className="text-muted text-[15px] leading-relaxed">{badge.desc}</p>

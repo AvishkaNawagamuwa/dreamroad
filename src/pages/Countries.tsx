@@ -2,18 +2,12 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ctaBgImg from '../assest/images/Gemini_Generated_Image_80tyo980tyo980ty.png';
 import {
-  HardHat,
-  Factory,
-  Building2,
-  Hotel,
-  Wrench,
-  Users,
   ArrowRight,
   CheckCircle,
   MapPin,
 } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
-import { fadeUp, slideLeft, slideRight, staggerContainer, staggerItem, hoverLift, viewportConfig } from '../utils/animations';
+import { fadeUp, slideLeft, slideRight, viewportConfig } from '../utils/animations';
 
 const Countries = () => {
   const countries = [
@@ -133,15 +127,6 @@ const Countries = () => {
     },
   ];
 
-  const jobIcons = {
-    'Construction': HardHat,
-    'Manufacturing': Factory,
-    'Warehouse': Building2,
-    'Hospitality': Hotel,
-    'Technical': Wrench,
-    'General': Users,
-  };
-
   return (
     <PageTransition>
     <div className="min-h-screen">
@@ -194,23 +179,23 @@ const Countries = () => {
                 viewport={viewportConfig}
                 className="bg-white rounded-3xl shadow-2xl overflow-hidden"
               >
-                <div className="grid md:grid-cols-2 gap-0">
-                  <div className={`relative h-[400px] ${index % 2 === 1 ? 'md:order-2' : ''}`}>
+                <div className="flex flex-col md:flex-row min-h-[480px]">
+                  <div className={`relative md:w-1/2 min-h-[300px] ${index % 2 === 1 ? 'md:order-2' : ''}`}>
                     <img
                       src={country.image}
                       alt={country.name}
-                      className="w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div className="absolute bottom-6 left-6">
-                      <div className="flex items-center gap-2 text-white mb-2">
-                        <MapPin size={24} className="text-primary" />
-                        <h3 className="text-4xl font-bold">{country.name}</h3>
+                      <div className="flex items-center gap-2 mb-2">
+                        <MapPin size={24} className="text-secondary" />
+                        <h3 className="text-4xl font-bold text-secondary drop-shadow-lg">{country.name}</h3>
                       </div>
                     </div>
                   </div>
 
-                  <div className="p-8 md:p-12">
+                  <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
                     <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                       {country.description}
                     </p>
@@ -249,49 +234,6 @@ const Countries = () => {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewportConfig} className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Job <span className="text-primary">Categories</span>
-            </h2>
-            <p className="text-lg text-gray-600">
-              We recruit for various positions across all destinations
-            </p>
-          </motion.div>
-          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportConfig} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { icon: HardHat, title: 'Construction Workers', description: 'Skilled and general construction labor' },
-              { icon: Factory, title: 'Factory Workers', description: 'Manufacturing and production staff' },
-              { icon: Building2, title: 'Warehouse Staff', description: 'Logistics and warehouse operations' },
-              { icon: Hotel, title: 'Hospitality Staff', description: 'Hotels, restaurants, and service industry' },
-              { icon: Wrench, title: 'Skilled Technicians', description: 'Technical and maintenance roles' },
-              { icon: Users, title: 'General Labor', description: 'Various entry-level positions' },
-            ].map((category, index) => (
-              <motion.div
-                key={index}
-                variants={staggerItem}
-                whileHover={hoverLift}
-                className="bg-gradient-to-br from-[#F8F7F3] to-white rounded-2xl p-8 border border-gray-100 cursor-default"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-[#C27733] rounded-xl flex items-center justify-center mb-6">
-                  <category.icon className="text-white" size={28} />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{category.title}</h3>
-                <p className="text-gray-600 mb-4">{category.description}</p>
-                <Link
-                  to="/jobs"
-                  className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
-                >
-                  View Jobs
-                  <ArrowRight size={16} />
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
       </section>
 

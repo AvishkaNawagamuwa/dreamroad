@@ -43,6 +43,11 @@ const About = () => {
       title: 'Customer Support',
       description: 'Dedicated assistance from initial inquiry through to successful placement and beyond.',
     },
+    {
+      icon: TrendingUp,
+      title: 'Excellence',
+      description: 'We continuously improve our services to deliver the highest quality outcomes for every candidate we serve.',
+    },
   ];
 
   const approach = [

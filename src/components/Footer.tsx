@@ -128,10 +128,7 @@ const Footer = () => {
           <p className="text-muted text-sm text-center md:text-left">
             © 2026 The Loop. All rights reserved. <span className="text-gray-400 font-medium">License No: 3482</span>
           </p>
-          <div className="flex gap-6 text-sm text-muted">
-            <Link to="/contact" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="/contact" className="hover:text-white transition-colors">Terms of Service</Link>
-          </div>
+
         </div>
       </div>
     </footer>
