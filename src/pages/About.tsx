@@ -1,6 +1,14 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ctaBgImg from '../assest/images/Gemini_Generated_Image_80tyo980tyo980ty.png';
+import ravishanImg from '../assest/images/company_member/L K M Ravishan Peiris.png';
+import wijerathnaImg from '../assest/images/company_member/R. H. P. R. Wijerathna.png';
+import vasanaImg from '../assest/images/company_member/M. A. T. Vasana.png';
+import ranathungaImg from '../assest/images/company_member/R. A. S. W. Ranathunga.png';
+import ranasingheImg from '../assest/images/company_member/R H S Ranasinghe.png';
+import jaasimImg from '../assest/images/company_member/M.F.M.Jaasim.png';
+import hirushaImg from '../assest/images/company_member/G C HIRUSHA.png';
+import dilshaniImg from '../assest/images/company_member/G.B.S Dilshani.png';
 import {
   Target,
   Eye,
@@ -64,6 +72,57 @@ const About = () => {
     { number: '15+', label: 'Countries' },
     { number: '50+', label: 'Partner Companies' },
     { number: '10+', label: 'Years Experience' },
+  ];
+
+  const teamMembers = [
+    {
+      name: 'G.B.S Dilshani',
+      role: 'Managing Director (Founder)',
+      credentials: 'IB BA in International Business, University of Gdansk - Faculty of Economics, Poland',
+      image: dilshaniImg,
+    },
+    {
+      name: 'L K M Ravishan Peiris',
+      role: 'General Manager',
+      credentials: 'BSc (Hons) Computer Science - SLIIT (Bedfordshire University UK), Ditec Higher National Diploma (Pearson Certified UK)',
+      image: ravishanImg,
+    },
+    {
+      name: 'R. H. P. R. Wijerathna',
+      role: 'Assistant Manager',
+      credentials: 'Diploma in General Management and Labour Migration',
+      image: wijerathnaImg,
+    },
+    {
+      name: 'M. A. T. Vasana',
+      role: 'Administration Officer',
+      credentials: 'Diploma in General Management and Labour Migration',
+      image: vasanaImg,
+    },
+    {
+      name: 'R. A. S. W. Ranathunga',
+      role: 'Marketing Executive',
+      credentials: 'Bachelor of Business Administration (BBA) in Marketing Management, University of Colombo (Specialized in Marketing)',
+      image: ranathungaImg,
+    },
+    {
+      name: 'R H S Ranasinghe',
+      role: 'Human Resources Executive',
+      credentials: 'Bachelor of Biosystems Technology (BBST) Honours Degree, University of Sri Jayewardenepura',
+      image: ranasingheImg,
+    },
+    {
+      name: 'M.F.M.Jaasim',
+      role: 'International Relations Officer',
+      credentials: 'Ditec Higher National Diploma, CiT Col Certificate (ESOFT)',
+      image: jaasimImg,
+    },
+    {
+      name: 'G C HIRUSHA',
+      role: 'Customer Service & Ticketing Executive',
+      credentials: 'Vocational Training Authority of Sri Lanka Certificate in English (2019), Certificate in International Airlines Ticketing',
+      image: hirushaImg,
+    },
   ];
 
   return (
@@ -290,6 +349,45 @@ const About = () => {
                 Hundreds of successful placements across multiple countries demonstrate our ability to deliver on our promises and change lives.
               </p>
             </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={viewportConfig} className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Meet Our <span className="text-primary">Professional Team</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Skilled professionals dedicated to guiding every client with expertise, transparency, and care.
+            </p>
+          </motion.div>
+
+          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportConfig} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index) => (
+              <motion.article
+                key={member.name}
+                variants={staggerItem}
+                whileHover={{ y: -6 }}
+                transition={{ duration: 0.3 }}
+                className="bg-[#FBFAF7] rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-[#EFE9DE]"
+              >
+                <div className="aspect-[4/4.5] overflow-hidden">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                    loading={index < 4 ? 'eager' : 'lazy'}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 leading-tight mb-2">{member.name}</h3>
+                  <p className="text-primary font-semibold text-sm uppercase tracking-wide mb-3">{member.role}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{member.credentials}</p>
+                </div>
+              </motion.article>
+            ))}
           </motion.div>
         </div>
       </section>
