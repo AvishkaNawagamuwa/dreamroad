@@ -112,7 +112,7 @@ const About = () => {
       image: ranasingheImg,
     },
     {
-      name: 'M.F.M.Jaasim',
+      name: 'M.F.M Jaasim',
       role: 'International Relations Officer',
       credentials: 'Ditec Higher National Diploma, CiT Col Certificate (ESOFT)',
       image: jaasimImg,
